@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
-import time  # Import time to simulate delay
+import time  # used to simulate a delay
 from scipy import stats
 
 st.title("Organoids Gene Expression Filtering & Visualization App")
@@ -120,11 +120,11 @@ else:
         z_threshold = st.sidebar.number_input("Z-score Threshold", min_value=0.0, value=3.0)
         
         # -------------------------------------------------------------
-        # 5. Data Filtering Pipeline with Loading Spinner
+        # 5. Data Filtering Pipeline with Spinner and Minimal Delay
         # -------------------------------------------------------------
         with st.spinner("Filtering data..."):
-            # Simulate a delay for demonstration (remove or adjust in production)
-            time.sleep(2)
+            # Artificial delay to ensure the spinner is visible (adjust as needed)
+            time.sleep(0.5)
             
             filtered_df = combined_df.copy()
             
